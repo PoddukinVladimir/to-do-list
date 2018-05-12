@@ -17,7 +17,10 @@ body {
 
 .input {
   width: 100%;
-  margin-right: 10px; }
+  height: 100%;
+  border: none;
+  font-size: 20px;
+  text-align: center; }
 
 .table {
   width: 100%;
@@ -26,11 +29,10 @@ body {
 
 .table__col {
   border: 1px solid #ddd;
-  padding: 8px; }
+  height: 45px;
+  text-align: left; }
 
 .table__col--head {
-  padding-top: 12px;
-  padding-bottom: 12px;
   text-align: left;
   background-color: #a78ccc;
   color: white; }
@@ -39,7 +41,8 @@ body {
   width: 80px; }
 
 .table__col--util {
-  width: 30px; }
+  width: 30px;
+  padding: 0 8px; }
 
 .table__row:nth-child(even) {
   background-color: #f2f2f2; }

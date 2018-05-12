@@ -46,5 +46,4 @@ class listCtrl {
     logData() {
         console.log(this.listData);
     }
-
 }

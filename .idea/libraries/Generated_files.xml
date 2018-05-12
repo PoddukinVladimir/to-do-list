@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/app/components/app-todo-list/app-todo-list.controller.js" />
+        <item url="file://$PROJECT_DIR$/dist/app/app-module.js" />
+        <item url="file://$PROJECT_DIR$/dist/app/directives/ng-enter.js" />
+        <item url="file://$PROJECT_DIR$/dist/app/entities/item.js" />
+        <item url="file://$PROJECT_DIR$/dist/app/components/app-todo-list/app-todo-list.component.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/app/components/app-todo-list/app-todo-list.controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/app/app-module.js" />
+      <root url="file://$PROJECT_DIR$/dist/app/directives/ng-enter.js" />
+      <root url="file://$PROJECT_DIR$/dist/app/entities/item.js" />
+      <root url="file://$PROJECT_DIR$/dist/app/components/app-todo-list/app-todo-list.component.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

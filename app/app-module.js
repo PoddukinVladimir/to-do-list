@@ -1,0 +1,1 @@
+let appModule = angular.module('todoApp', []);

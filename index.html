@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="todoApp">
 <head>
     <meta charset="UTF-8">
-    <title>123134</title>
-</head>
-<body>
+    <title>To-do list</title>
+    <link rel="stylesheet" href="app/sass/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
+</head>
+<body ng-cloak>
+
+<app-todo-list></app-todo-list>
+
+<!-- Adding entities -->
+<script src="dist/app/entities/item.js"></script>
+
+<!-- Adding modules -->
+<script src="dist/app/app-module.js"></script>
+
+<!-- Adding directives -->
+<script src="dist/app/directives/ng-enter.js"></script>
+
+<!-- Adding components -->
+<script src="dist/app/components/app-todo-list/app-todo-list.controller.js"></script>
+<script src="dist/app/components/app-todo-list/app-todo-list.component.js"></script>
 </body>
 </html>

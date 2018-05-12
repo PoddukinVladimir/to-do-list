@@ -1,0 +1,79 @@
+.container--flex {
+  display: flex;
+  justify-content: center; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse; }
+
+.table__col {
+  border: 1px solid #ddd;
+  padding: 8px; }
+
+.table__col--head {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #a78ccc;
+  color: white; }
+
+.table__col--util {
+  width: 1%; }
+
+.table__row:nth-child(even) {
+  background-color: #f2f2f2; }
+.table__row:hover {
+  background-color: #ddd;
+  cursor: pointer; }
+
+.sort-arrow {
+  display: block;
+  width: 100%; }
+
+.sort-arrow:link,
+.sort-arrow:visited,
+.sort-arrow:hover,
+.sort-arrow:active {
+  color: #000;
+  text-decoration: none; }
+
+.sort-arrow {
+  position: relative; }
+
+.sort-arrow:before,
+.sort-arrow:after {
+  border: 8px solid transparent;
+  content: "";
+  display: block;
+  height: 0;
+  right: 5px;
+  top: 50%;
+  position: absolute;
+  width: 0; }
+
+.sort-arrow:before {
+  border-bottom-color: black;
+  margin-top: -17px; }
+
+.sort-arrow:after {
+  border-top-color: black;
+  margin-top: 1px; }
+
+.button {
+  width: 30px;
+  height: 30px;
+  border: none; }
+  .button:hover {
+    cursor: pointer; }
+  .button:focus {
+    outline: none; }
+
+.button--add {
+  background: url(../img/add-icon.png) center;
+  background-size: 70px; }
+
+.button--remove {
+  background: url(../img/remove-icon.png) center;
+  background-size: 75px; }
+
+/*# sourceMappingURL=main.css.map */

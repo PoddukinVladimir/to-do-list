@@ -1,26 +1,31 @@
-<div class="container container--flex">
-    <input type="text" ng-model="$ctrl.text" placeholder="Enter new task..." ng-enter="$ctrl.addItem()">
-    <button class="button button--add" ng-click="$ctrl.addItem()"></button>
-</div>
+<h1 class="app-title">TODO List:</h1>
 
-<table class="table">
-    <tr class="table__row table__row--head">
-        <th class="table__col table__col--head" ng-click="$ctrl.sortItems('id')">
-            <a href="#" class="sort-arrow">№</a>
-        </th>
-        <th class="table__col table__col--head" ng-click="$ctrl.sortItems('text')">
-            <a href="#" class="sort-arrow">To do</a>
-        </th>
-        <th class="table__col table__col--head table__col--util"></th>
-    </tr>
-    <tbody>
-    <tr class="table__row table__row--body"
-        ng-repeat="item in $ctrl.listData | orderBy:$ctrl.sortValue:$ctrl.reverseSort">
-        <td class="table__col table__col--body">{{item.id}}</td>
-        <td class="table__col table__col--body">{{item.text}}</td>
-        <td class="table__col table__col--util" ng-click="$ctrl.removeItem(item)">
-            <button class="button button--remove"></button>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div class="container">
+    <div class="container container--flex">
+        <input type="text" class="input" ng-model="$ctrl.text" placeholder="Enter new task..."
+               ng-enter="$ctrl.addItem()">
+        <button class="button button--add" ng-click="$ctrl.addItem()"></button>
+    </div>
+
+    <table class="table">
+        <tr class="table__row table__row--head">
+            <th class="table__col table__col--head table__col--id" ng-click="$ctrl.sortItems('id')">
+                <a href="#" class="sort-arrow">№</a>
+            </th>
+            <th class="table__col table__col--head" ng-click="$ctrl.sortItems('text')">
+                <a href="#" class="sort-arrow">To do</a>
+            </th>
+            <th class="table__col table__col--head table__col--util"></th>
+        </tr>
+        <tbody>
+        <tr class="table__row table__row--body"
+            ng-repeat="item in $ctrl.listData | orderBy:$ctrl.sortValue:$ctrl.reverseSort">
+            <td class="table__col table__col--body">{{item.id}}</td>
+            <td class="table__col table__col--body">{{item.text}}</td>
+            <td class="table__col table__col--util" ng-click="$ctrl.removeItem(item)">
+                <button class="button button--remove"></button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

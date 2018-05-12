@@ -8,10 +8,10 @@ var listCtrl = function () {
     function listCtrl() {
         _classCallCheck(this, listCtrl);
 
-        this.listData = [];
+        this.listData = [new Item('First Task', 1), new Item('Second Task', 2), new Item('Third Task', 3), new Item('Fourth Task', 4)];
         this.reverseSort = false;
         this.sortValue = '';
-        this.currentCount = 0;
+        this.currentCount = this.listData.length;
     }
 
     _createClass(listCtrl, [{

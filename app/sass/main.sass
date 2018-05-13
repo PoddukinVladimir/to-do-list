@@ -4,16 +4,27 @@ body
   padding: 0
   font-family: Verdana
 
-.app-title
-  text-align: center
+.button
+  width: 30px
+  height: 30px
+  border: none
+  &:hover
+    cursor: pointer
+  &:focus
+    outline: none
+
+.button--add
+  background: url(../img/add-icon.png) center
+  background-size: 70px
+  margin-right: 7px
+
+.button--remove
+  background: url(../img/remove-icon.png) center
+  background-size: 75px
 
 .container
   max-width: 1000px
   display: inline-block
-
-.container--flex
-  display: flex
-  justify-content: center
 
 .input
   width: 100%
@@ -31,6 +42,7 @@ body
   border: 1px solid #ddd
   height: 45px
   text-align: left
+  word-break: break-all
 
 .table__col--head
   text-align: left
@@ -83,21 +95,3 @@ body
 .sort-arrow:after
   border-top-color: black
   margin-top: 1px
-
-.button
-  width: 30px
-  height: 30px
-  border: none
-  &:hover
-    cursor: pointer
-  &:focus
-    outline: none
-
-.button--add
-  background: url(../img/add-icon.png) center
-  background-size: 70px
-  margin-right: 7px
-
-.button--remove
-  background: url(../img/remove-icon.png) center
-  background-size: 75px

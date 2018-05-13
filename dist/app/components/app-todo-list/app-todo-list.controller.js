@@ -8,16 +8,21 @@ var listCtrl = function () {
     function listCtrl() {
         _classCallCheck(this, listCtrl);
 
-        this.listData = [new Item('First Task', 1), new Item('Second Task', 2), new Item('Third Task', 3), new Item('Fourth Task', 4)];
+        this.listData = [new Item('First Task'), new Item('Second Task'), new Item('Third Task'), new Item('Fourth Task')];
         this.reverseSort = false;
         this.sortValue = '';
-        this.currentCount = this.listData.length;
     }
 
     _createClass(listCtrl, [{
+        key: '$onInit',
+        value: function $onInit() {
+            this.updateIds();
+        }
+    }, {
         key: 'removeItem',
         value: function removeItem(item) {
             this.listData.splice(this.listData.indexOf(item), 1);
+            this.updateIds();
 
             this.logData();
         }
@@ -34,7 +39,7 @@ var listCtrl = function () {
         value: function createItem() {
             var item = new Item();
             item.text = this.text;
-            item.id = ++this.currentCount;
+            item.id = this.listData.length + 1;
 
             this.resetInput();
 
@@ -50,6 +55,13 @@ var listCtrl = function () {
         value: function sortItems(sortValue) {
             this.sortValue = sortValue;
             this.reverseSort = !this.reverseSort;
+        }
+    }, {
+        key: 'updateIds',
+        value: function updateIds() {
+            this.listData.forEach(function (item, index) {
+                item.id = index + 1;
+            });
         }
     }, {
         key: 'logData',

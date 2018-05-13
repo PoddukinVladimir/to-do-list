@@ -1,18 +1,22 @@
 class listCtrl {
     constructor() {
         this.listData = [
-            new Item('First Task', 1),
-            new Item('Second Task', 2),
-            new Item('Third Task', 3),
-            new Item('Fourth Task', 4),
+            new Item('First Task'),
+            new Item('Second Task'),
+            new Item('Third Task'),
+            new Item('Fourth Task'),
         ];
         this.reverseSort = false;
         this.sortValue = '';
-        this.currentCount = this.listData.length;
+    }
+
+    $onInit() {
+        this.updateIds();
     }
 
     removeItem(item) {
         this.listData.splice(this.listData.indexOf(item), 1);
+        this.updateIds();
 
         this.logData();
     }
@@ -27,7 +31,7 @@ class listCtrl {
     createItem() {
         let item = new Item();
         item.text = this.text;
-        item.id = ++this.currentCount;
+        item.id = this.listData.length + 1;
 
         this.resetInput();
 
@@ -41,6 +45,12 @@ class listCtrl {
     sortItems(sortValue) {
         this.sortValue = sortValue;
         this.reverseSort = !this.reverseSort;
+    }
+
+    updateIds() {
+        this.listData.forEach((item, index) => {
+            item.id = index + 1;
+        });
     }
 
     logData() {
